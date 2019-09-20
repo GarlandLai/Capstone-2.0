@@ -21,6 +21,7 @@ Possibly another API?
 Is there anything else you’d like your instructor to know?
 I’m still brainstorming ideas and possible functionalities. Will likely change things up a bit.
 
+## State Planning
 
 
 ## Available Scripts
