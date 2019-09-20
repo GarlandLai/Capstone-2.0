@@ -5,10 +5,10 @@ import Relax from './Relax/Relax';
 class HomePage extends React.Component {
   render() {
     return (
-      <div>
-      <Relax />
-      <br/>
-      <Learn />
+      <div className='container'>
+        <Relax />
+        <br/>
+        <Learn />
       </div>
     );
   }
