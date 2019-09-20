@@ -1,5 +1,28 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Description
+Name of Student: Garland Lai
+Name of Project: Self Care App (Name TBD)
+Project’s Purpose or Goal: App to help people practice self-care and improve mental health.
+List the absolute minimum features the project requires to meet this purpose or goal:
+Homepage with links to different sections
+It will offer tools to improve mental health
+It will offer tips/exercises to improve physical health
+What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
+ReactJS
+Javascript
+Firebase Database?
+Possible API?
+If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+Break down mental and physical into sub-categories
+Add a nutritional health section
+What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+Possibly another API?
+Is there anything else you’d like your instructor to know?
+I’m still brainstorming ideas and possible functionalities. Will likely change things up a bit.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
