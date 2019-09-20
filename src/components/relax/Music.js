@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Nutrition extends React.Component {
+class Music extends React.Component {
   render() {
     return (
       <div>
-      <h3>Nutrition</h3>
+      <h3>Music Stuff</h3>
       </div>
     );
   }
 }
 
-export default Nutrition;
+export default Music;
