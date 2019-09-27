@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
-class CreateJournal extends Component {
+class PromptJournal extends Component {
     state = {
-      title: '',
+      prompt1: '',
+      prompt2: '',
+      prompt3: '',
       content: ''
     }
   
@@ -51,4 +53,4 @@ class CreateJournal extends Component {
   }
 }
 
-export default CreateJournal;
+export default PromptJournal;

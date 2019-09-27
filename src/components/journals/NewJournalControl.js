@@ -1,6 +1,6 @@
 import React from 'react';
 import FormConfirmation from './FormConfirmation';
-import CreateJournal from './CreateJournal';
+import PromptJournal from './PromptJournal';
 import PropTypes from 'prop-types';
 
 class NewJournalControl extends React.Component {
@@ -9,17 +9,17 @@ class NewJournalControl extends React.Component {
     this.state = {
       promptVisibleOnPage: false,
     };
-    this.handleFormConfirmation = this.handleAdminConfirmation.bind(this);
+    this.handleFormConfirmation = this.handleFormConfirmation.bind(this);
   }
 
-  handleAdminConfirmation() {
+  handleFormConfirmation() {
     this.setState({ promptVisibleOnPage: true });
   }
 
   render() {
     let currentlyVisibleContent = null;
     if (this.state.promptVisibleOnPage) {
-      currentlyVisibleContent = <CreateJournal onNewEntry={this.props.onNewEntry}/>;
+      currentlyVisibleContent = <PromptJournal onNewEntry={this.props.onNewEntry}/>;
     } else {
       currentlyVisibleContent = <FormConfirmation onFormConfirmation={ this.handleFormConfirmation } />;
     }
