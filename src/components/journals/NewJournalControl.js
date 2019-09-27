@@ -19,7 +19,7 @@ class NewJournalControl extends React.Component {
   render() {
     let currentlyVisibleContent = null;
     if (this.state.promptVisibleOnPage) {
-      currentlyVisibleContent = <CreateJournal onNewKegCreation={this.props.onNewKegCreation}/>;
+      currentlyVisibleContent = <CreateJournal onNewEntry={this.props.onNewEntry}/>;
     } else {
       currentlyVisibleContent = <FormConfirmation onFormConfirmation={ this.handleFormConfirmation } />;
     }
@@ -33,7 +33,7 @@ class NewJournalControl extends React.Component {
 }
 
 NewJournalControl.propTypes = {
-  onNewKegCreation: PropTypes.func,
+  onNewEntry: PropTypes.func,
 };
 
 export default NewJournalControl;

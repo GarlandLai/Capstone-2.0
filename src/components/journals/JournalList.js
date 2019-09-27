@@ -1,18 +1,15 @@
-import React from "react";
-import ProjectDetails from "./ProjectDetails";
+import React from 'react';
+import JournalDetails from './JournalDetails';
+import PropTypes from 'prop-types';
 
-const ProjectList = ({projects}) => {
+function JournalList() {
+  console.log("hi");
   return (
-    <div className="project-list section">
-      {projects && projects.map(project => {
-        return (
-          <Link to={'/project/' + project.id}>
-          <ProjectDetails project={project} key={project.id} />
-          </Link>
-        )
-      })}
+    <div className='container'>
+      < JournalDetails />
     </div>
   );
-};
+}
 
-export default ProjectList;
+
+export default JournalList;
