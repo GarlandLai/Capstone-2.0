@@ -11,5 +11,8 @@ function JournalList() {
   );
 }
 
+JournalList.propTypes = {
+  journalList: PropTypes.array,
+};
 
 export default JournalList;
