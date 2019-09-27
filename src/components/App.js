@@ -3,8 +3,7 @@ import '../App.css';
 import Header from './Header';
 import HomePage from './HomePage';
 import Navigation from './Navigation';
-import Relax from './Relax/Relax';
-import Learn from './Learn/Learn';
+import Meditate from './meditate/Meditate';
 import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
@@ -15,8 +14,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/relax' component={Relax} />
-          <Route exact path='/learn' component={Learn} />
+          <Route exact path='/meditate' component={Meditate} />
         </Switch>
       </div>
     );

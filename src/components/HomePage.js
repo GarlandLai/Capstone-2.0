@@ -1,14 +1,13 @@
 import React from 'react';
-import Learn from './Learn/Learn';
-import Relax from './Relax/Relax';
+import Meditate from './meditate/Meditate';
+import CreateJournal from './journals/CreateJournal'
 
 class HomePage extends React.Component {
   render() {
     return (
       <div className='container'>
-        <Relax />
-        <br/>
-        <Learn />
+        <Meditate />
+        <CreateJournal />
       </div>
     );
   }

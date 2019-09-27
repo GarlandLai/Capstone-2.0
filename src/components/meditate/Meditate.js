@@ -1,21 +1,21 @@
 import React from 'react';
-import Exercise from './Exercise';
-import Nutrition from './Nutrition';
+import Meditation from './Meditation';
+import Music from './Music';
 
-class Learn extends React.Component {
+class Meditate extends React.Component {
   render() {
     return (
       <div>
-        <h1>Learn</h1>
+        <h1>Meditate</h1>
         <div className="row">
           <div className="col-md-6">
             <div className="card">
-              <Exercise />
+              <Meditation />
             </div>
           </div>
           <div className="col-md-6">
             <div className="card">
-              <Nutrition />
+              <Music />
             </div>
           </div>
         </div>
@@ -24,4 +24,4 @@ class Learn extends React.Component {
   }
 }
 
-export default Learn;
+export default Meditate;
