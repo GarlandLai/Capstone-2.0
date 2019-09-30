@@ -13,6 +13,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       JournalList: [],
+      selectedEntry: null
     };
     this.handleNewEntry = this.handleNewEntry.bind(this);
   }
@@ -35,6 +36,11 @@ class App extends React.Component {
     console.log(newJournalList);
   }
 
+  handleSelectEntry = (entry) => {
+    this.setState({ selectedEntry: entry })
+    alert('Selected journal #' + this.state.selectedEntry.id);
+  } 
+
   render() {
     return (
       <div className="App">
@@ -44,7 +50,7 @@ class App extends React.Component {
         <Meditate />
         <NewJournalControl onNewEntry={this.handleNewEntry} />
       <div className='container'>
-        <JournalList journalList={this.state.JournalList} />
+        <JournalList onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalList} />
       </div>
       </div>
     );

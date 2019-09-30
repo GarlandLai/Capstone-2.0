@@ -1,6 +1,7 @@
 import React from "react";
+// import PropTypes from 'prop-types';
 
-const JournalDetails = () => {
+function JournalDetails() {
     return (
     <div>
       <h1>Deets</h1>
@@ -8,7 +9,8 @@ const JournalDetails = () => {
   );
 };
 
-
-
+// JournalDetails.propTypes = {
+//   onSelectEntry: PropTypes.func
+// }
 
 export default JournalDetails;
