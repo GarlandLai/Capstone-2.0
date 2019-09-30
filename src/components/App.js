@@ -28,7 +28,6 @@ class App extends React.Component {
     .catch(error => console.log(error))
   }
 
-
   handleNewEntry(newEntry) {
     let newJournalList = this.state.JournalList.slice();
     newJournalList.push(newEntry);

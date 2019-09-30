@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 class PromptJournal extends Component {
   constructor(props) {
@@ -16,6 +17,18 @@ class PromptJournal extends Component {
     this.setState({
        [e.target.id]: e.target.value
     })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submitted")
+    const entry = { prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content}
+    axios.post('http://localhost:3000/entries',(entry))
+      .then(response => {
+        console.log(response)
+      })
+      .catch(error => console.log(error))
+    this.props.onNewEntry(entry);
   }
  
 
@@ -45,13 +58,17 @@ class PromptJournal extends Component {
             <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <button>Create</button>
+            <button type="submit">Create</button>
           </div>
         </form>
       </div>
     )
   }
 }
+
+PromptJournal.propTypes = {
+  onNewEntry: PropTypes.func,
+};
 
 
 export default PromptJournal;
