@@ -6,9 +6,11 @@ function JournalList(props) {
   console.log(props)
   return (
     <div className='container'>
+      < JournalDetails />
       {props.journalList.map(journalList => {
         return (
           <div className="single-list" key={journalList.id}>
+            <h3>{journalList.created_at}</h3>
             <h4>{journalList.prompt1}</h4>
             <h4>{journalList.prompt2}</h4>
             <h4>{journalList.prompt3}</h4>
@@ -16,7 +18,7 @@ function JournalList(props) {
           </div>
         )
       })}
-      < JournalDetails />
+
     </div>
   );
 }

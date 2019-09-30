@@ -1,23 +1,30 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class PromptJournal extends Component {
-    state = {
-      prompt1: '',
-      prompt2: '',
-      prompt3: '',
-      content: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+      prompt1: "",
+      prompt2: "",
+      prompt3: "",
+      content: ""
     }
-  
-    handleChange = (e) => {
-      this.setState({
-        [e.target.id]: e.target.value
-      })
-    }
+  }
 
-    handleSubmit = (e) => {
-      e.preventDefault();
-      this.props.createJournal(this.state)
-    }
+  handleChange = (e) => {
+    this.setState({
+       [e.target.id]: e.target.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    axios.post('http://localhost:3000/entries', ({ prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content }))
+      .then(response => {
+        console.log(response.data)
+      })
+      .catch(error => console.log(error))
+  }
 
   render() {
     console.log(this.state);
@@ -52,5 +59,6 @@ class PromptJournal extends Component {
     )
   }
 }
+
 
 export default PromptJournal;
