@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      JournalList: [],
+      JournalEntryList: [],
       selectedEntry: null
     };
     this.handleNewEntry = this.handleNewEntry.bind(this);
@@ -23,16 +23,17 @@ class App extends React.Component {
     .then(response => {
       console.log(response)
       this.setState({
-        JournalList: response.data
+        JournalEntryList: response.data
       })
     })
     .catch(error => console.log(error))
   }
 
+
   handleNewEntry(newEntry) {
-    let newJournalList = this.state.JournalList.slice();
+    let newJournalList = this.state.JournalEntryList.slice();
     newJournalList.push(newEntry);
-    this.setState({ JournalList: newJournalList });
+    this.setState({ JournalEntryList: newJournalList });
     console.log(newJournalList);
   }
 
@@ -42,6 +43,7 @@ class App extends React.Component {
   } 
 
   render() {
+    console.log(this.state.JournalEntryList)
     return (
       <div className="App">
         <Navigation />
@@ -50,7 +52,7 @@ class App extends React.Component {
         <Meditate />
         <NewJournalControl onNewEntry={this.handleNewEntry} />
       <div className='container'>
-        <JournalList onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalList} />
+        <JournalList onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} />
       </div>
       </div>
     );

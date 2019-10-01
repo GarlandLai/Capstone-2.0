@@ -21,8 +21,9 @@ Possibly another API? <br>
 Is there anything else you’d like your instructor to know? <br>
 I’m still brainstorming ideas and possible functionalities. Will likely change things up a bit. <br>
 
-## State Planning
+## Component Tree
 
+![Component Tree](/src/ComponentTree.jpg)
 
 ## Available Scripts
 
