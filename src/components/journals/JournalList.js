@@ -6,7 +6,7 @@ import JournalDetail from './JournalDetail'
 function JournalList(props) {
   let optionalContent = null;
   if (props.selectedEntry !=null) {
-    optionalContent = <JournalDetail selectedEntry={props.selectedEntry}/>
+    optionalContent = <JournalDetail selectedEntry={props.selectedEntry} onDelete={props.onDelete}/>
   }
   console.log(props.selectedEntry);
   return (
@@ -29,7 +29,8 @@ function JournalList(props) {
 JournalList.propTypes = {
   journalList: PropTypes.array,
   onSelectEntry: PropTypes.func,
-  selectedEntry: PropTypes.object
+  selectedEntry: PropTypes.object,
+  onDelete: PropTypes.func
 };
 
 export default JournalList;

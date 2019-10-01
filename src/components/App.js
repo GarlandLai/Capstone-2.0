@@ -43,7 +43,18 @@ class App extends React.Component {
     
   handleSelectEntry(entry){
     this.setState({ selectedEntry: entry });
-  } 
+  }
+
+  handleDelete = () => {
+    let id = this.state.selectedEntry.id;
+    axios.delete(`http://localhost:3000/entries/${id}`)
+    .then(response => {
+      console.log(response)
+      this.handleUpdate();
+      this.setState({selectedEntry: null})
+    })
+    .catch(error => console.log(error))
+  }
 
   render() {
     console.log(this.state.JournalEntryList)
@@ -55,7 +66,7 @@ class App extends React.Component {
         <Meditate />
         <NewJournalControl onUpdate={this.handleUpdate} onNewEntry={this.handleNewEntry} />
       <div className='container'>
-        <JournalList onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} />
+        <JournalList onDelete={this.handleDelete} onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} />
       </div>
       </div>
     );

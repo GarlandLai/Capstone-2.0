@@ -10,11 +10,13 @@ export default function JournalDetail(props) {
         <h4>{props.selectedEntry.prompt2}</h4>
         <h4>{props.selectedEntry.prompt3}</h4>
         <h4>{props.selectedEntry.content}</h4>
+        <button onClick={props.onDelete}>Delete Entry</button>
       <hr />
     </div>
   );
 }
 
 JournalDetail.propTypes = {
-  selectedEntry: PropTypes.object
+  selectedEntry: PropTypes.object,
+  onDelete: PropTypes.func
 }
