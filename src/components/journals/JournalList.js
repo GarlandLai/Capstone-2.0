@@ -18,6 +18,7 @@ function JournalList(props) {
           prompt2={journal.prompt2}
           prompt3={journal.prompt3}
           content={journal.content}
+          created_at={journal.created_at}
           onSelectEntry={props.onSelectEntry}
           id={journal.id} />
       )}
