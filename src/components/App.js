@@ -22,20 +22,44 @@ class App extends React.Component {
     axios.get('http://localhost:3000/entries')
     .then(response => {
       console.log(response)
-      this.setState({
-        JournalEntryList: response.data
-      })
+      this.setState(
+        {JournalEntryList: response.data},
+        () => console.log("state update", this.state.JournalEntryList) )
     })
     .catch(error => console.log(error))
   }
-
 
   handleNewEntry(newEntry) {
     let newJournalList = this.state.JournalEntryList.slice();
     newJournalList.push(newEntry);
     this.setState({ JournalEntryList: newJournalList });
     console.log(newJournalList);
+    this.handleUpdate();
   }
+
+  handleUpdate() {
+    axios.get('http://localhost:3000/entries')
+    .then(response => {
+      console.log(response)
+      this.setState(
+        {JournalEntryList: response.data},
+        () => console.log("state update", this.state.JournalEntryList) )
+    })
+    .catch(error => console.log(error))
+  }
+    
+  
+
+    // handleNewEntry(newEntry){
+    //   axios.get('http://localhost:3000/entries')
+    //     .then(response => {
+    //     console.log(response)
+    //      this.setState({
+    //       JournalEntryList: response.data
+    //     })
+    //   })
+    //   .catch(error => console.log(error))
+    // }
 
   handleSelectEntry = (entry) => {
     this.setState({ selectedEntry: entry })

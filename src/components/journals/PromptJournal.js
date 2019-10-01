@@ -22,7 +22,7 @@ class PromptJournal extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("submitted")
-    const entry = { prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content}
+    const entry = {prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content}
     axios.post('http://localhost:3000/entries',(entry))
       .then(response => {
         console.log(response)

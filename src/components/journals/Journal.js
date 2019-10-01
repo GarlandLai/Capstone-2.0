@@ -19,7 +19,7 @@ Journal.propTypes = {
   prompt2: PropTypes.string,
   prompt3: PropTypes.string,
   content: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.number
 }
 
 export default Journal;
