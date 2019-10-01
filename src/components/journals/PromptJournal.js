@@ -25,10 +25,10 @@ class PromptJournal extends Component {
     const entry = {prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content}
     axios.post('http://localhost:3000/entries',(entry))
       .then(response => {
+        this.props.onUpdate();
         console.log(response)
       })
       .catch(error => console.log(error))
-    this.props.onNewEntry(entry);
   }
  
 
@@ -68,6 +68,7 @@ class PromptJournal extends Component {
 
 PromptJournal.propTypes = {
   onNewEntry: PropTypes.func,
+  onUpdate: PropTypes.func,
 };
 
 

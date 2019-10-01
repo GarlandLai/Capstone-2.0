@@ -15,7 +15,7 @@ class App extends React.Component {
       JournalEntryList: [],
       selectedEntry: null
     };
-    this.handleNewEntry = this.handleNewEntry.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   componentDidMount() {
@@ -29,14 +29,6 @@ class App extends React.Component {
     .catch(error => console.log(error))
   }
 
-  handleNewEntry(newEntry) {
-    let newJournalList = this.state.JournalEntryList.slice();
-    newJournalList.push(newEntry);
-    this.setState({ JournalEntryList: newJournalList });
-    console.log(newJournalList);
-    this.handleUpdate();
-  }
-
   handleUpdate() {
     axios.get('http://localhost:3000/entries')
     .then(response => {
@@ -48,19 +40,6 @@ class App extends React.Component {
     .catch(error => console.log(error))
   }
     
-  
-
-    // handleNewEntry(newEntry){
-    //   axios.get('http://localhost:3000/entries')
-    //     .then(response => {
-    //     console.log(response)
-    //      this.setState({
-    //       JournalEntryList: response.data
-    //     })
-    //   })
-    //   .catch(error => console.log(error))
-    // }
-
   handleSelectEntry = (entry) => {
     this.setState({ selectedEntry: entry })
     alert('Selected journal #' + this.state.selectedEntry.id);
@@ -74,7 +53,7 @@ class App extends React.Component {
         <Header />
 
         <Meditate />
-        <NewJournalControl onNewEntry={this.handleNewEntry} />
+        <NewJournalControl onUpdate={this.handleUpdate} onNewEntry={this.handleNewEntry} />
       <div className='container'>
         <JournalList onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} />
       </div>

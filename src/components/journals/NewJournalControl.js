@@ -19,7 +19,7 @@ class NewJournalControl extends React.Component {
   render() {
     let currentlyVisibleContent = null;
     if (this.state.promptVisibleOnPage) {
-      currentlyVisibleContent = <PromptJournal onNewEntry={this.props.onNewEntry}/>;
+      currentlyVisibleContent = <PromptJournal onUpdate={this.props.onUpdate} onNewEntry={this.props.onNewEntry}/>;
     } else {
       currentlyVisibleContent = <FormConfirmation onFormConfirmation={ this.handleFormConfirmation } />;
     }
@@ -34,6 +34,7 @@ class NewJournalControl extends React.Component {
 
 NewJournalControl.propTypes = {
   onNewEntry: PropTypes.func,
+  onUpdate: PropTypes.func,
 };
 
 export default NewJournalControl;
