@@ -1,12 +1,14 @@
 import React from 'react';
 import Journal from './Journal';
 import PropTypes from 'prop-types';
+import JournalDetail from './JournalDetail'
 
 function JournalList(props) {
   console.log(props)
 
   return (
     <div className='container'>
+      <JournalDetail />
       {props.journalList.map((journal) =>
         <Journal prompt1={journal.prompt1}
           prompt2={journal.prompt2}

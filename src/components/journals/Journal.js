@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 function Journal(props) {
-  console.log(props)
+
   return (
   <div>
 <h2 onClick={() => {alert("Clicked on Journal #" + props.id)}}>Journal Entry #{props.id}</h2>

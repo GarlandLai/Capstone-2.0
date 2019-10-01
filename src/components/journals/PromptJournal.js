@@ -40,7 +40,7 @@ class PromptJournal extends Component {
           <h4 className="grey-text text-darken-3">Meditation Journal</h4>
           <div className="input-field">
             <label htmlFor="prompt1">How do you feel about your meditation experience?</label>
-            <input type="text" id="prompt1" onChange={this.handleChange} />
+            <input type="text" id="prompt1" onChange={this.handleChange} required/>
           </div>
 
           <div className="input-field">
@@ -55,7 +55,7 @@ class PromptJournal extends Component {
 
           <div className="input-field">
             <label htmlFor="content">This is where you can write anything you want!</label>
-            <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} />
+            <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} required/>
           </div>
           <div className="input-field">
             <button type="submit">Create</button>
