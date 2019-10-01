@@ -5,10 +5,6 @@ function Journal(props) {
   const journalInfo = 
   <div>
     <h2>Journal #{props.id}</h2>
-    <h4>{props.prompt1}</h4>
-    <h4>{props.prompt2}</h4>
-    <h4>{props.prompt3}</h4>
-    <h4>{props.content}</h4>
   </div>
 
   return (
