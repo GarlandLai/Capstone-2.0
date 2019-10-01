@@ -16,6 +16,7 @@ class App extends React.Component {
       selectedEntry: null
     };
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleSelectEntry = this.handleSelectEntry.bind(this);
   }
 
   componentDidMount() {
@@ -40,9 +41,8 @@ class App extends React.Component {
     .catch(error => console.log(error))
   }
     
-  handleSelectEntry = (entry) => {
-    this.setState({ selectedEntry: entry })
-    alert('Selected journal #' + this.state.selectedEntry.id);
+  handleSelectEntry(entry){
+    this.setState({ selectedEntry: entry });
   } 
 
   render() {
@@ -55,7 +55,7 @@ class App extends React.Component {
         <Meditate />
         <NewJournalControl onUpdate={this.handleUpdate} onNewEntry={this.handleNewEntry} />
       <div className='container'>
-        <JournalList onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} />
+        <JournalList onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} />
       </div>
       </div>
     );
