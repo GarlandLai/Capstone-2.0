@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import EditPromptJournal from './EditPromptJournal';
-import { Link } from 'react-router-dom';
+import EditJournalEntry from './EditJournalEntry';
 
-export default function JournalDetail(props) {
+class JournalDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      setModalShow: false
+    }
+  }
+
+  handleToggle = () => {
+    this.setState({ setModalShow: !this.state.setModalShow })
+   }
+
+  render() {
+    console.log(this.state)
   return (
     <div>
       <hr/>
-        <h2>Journal #{props.selectedEntry.id} - {props.selectedEntry.created_at}</h2>
-        <h4>{props.selectedEntry.prompt1}</h4>
-        <h4>{props.selectedEntry.prompt2}</h4>
-        <h4>{props.selectedEntry.prompt3}</h4>
-        <h4>{props.selectedEntry.content}</h4>
-        <button component={EditPromptJournal}>Edit Entry</button>
-        <button onClick={props.onDelete}>Delete Entry</button>
-      <hr />
+        <h2>Journal #{this.props.selectedEntry.id} - {this.props.selectedEntry.created_at}</h2>
+        <h4>{this.props.selectedEntry.prompt1}</h4>
+        <h4>{this.props.selectedEntry.prompt2}</h4>
+        <h4>{this.props.selectedEntry.prompt3}</h4>
+        <h4>{this.props.selectedEntry.content}</h4>
+        <button variant='primary' onClick={this.handleToggle}>Edit Entry</button>
+        <button onClick={this.props.onDelete}>Delete Entry</button>
+      <hr/>
+      <EditJournalEntry show={this.state.setModalShow} onToggle={this.handleToggle} />
     </div>
-  );
+    );
+  } 
 }
 
 JournalDetail.propTypes = {
@@ -24,3 +38,5 @@ JournalDetail.propTypes = {
   onDelete: PropTypes.func,
   onUpdate: PropTypes.func
 }
+
+export default JournalDetail;
