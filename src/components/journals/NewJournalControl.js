@@ -16,12 +16,20 @@ class NewJournalControl extends React.Component {
     this.setState({ promptVisibleOnPage: true });
   }
 
+  clearForm = () => {
+    document.getElementById("addForm").reset();
+    console.log(this.props.promptVisibleOnPage)
+    this.setState({ promptVisibleOnPage: false})
+    console.log(this.props.promptVisibleOnPage)
+  }
+ 
+
   render() {
     let currentlyVisibleContent = null;
     if (this.state.promptVisibleOnPage) {
-      currentlyVisibleContent = <PromptJournal onUpdate={this.props.onUpdate} onNewEntry={this.props.onNewEntry}/>;
+      currentlyVisibleContent = <PromptJournal onUpdate={this.props.onUpdate} onNewEntry={this.props.onNewEntry} promptVisibleOnPage={this.state} clearForm={this.clearForm}/>;
     } else {
-      currentlyVisibleContent = <FormConfirmation onFormConfirmation={ this.handleFormConfirmation } />;
+      currentlyVisibleContent = <FormConfirmation onFormConfirmation={this.handleFormConfirmation} />;
     }
 
     return (

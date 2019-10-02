@@ -26,16 +26,18 @@ class PromptJournal extends Component {
     axios.post('http://localhost:3000/entries',(entry))
       .then(response => {
         this.props.onUpdate();
-        this.clearForm();
+        this.props.clearForm();
         console.log(response)
       })
       .catch(error => console.log(error))
   }
 
-  clearForm = () => {
-    console.log("clearForm")
-    document.getElementById("addForm").reset();
-  }
+  // clearForm = (props) => {
+  //   document.getElementById("addForm").reset();
+  //   console.log(this.props.promptVisibleOnPage)
+  //   this.props.setState({ promptVisibleOnPage: false})
+  //   console.log(this.props.promptVisibleOnPage)
+  // }
  
 
   render() {
@@ -75,6 +77,8 @@ class PromptJournal extends Component {
 PromptJournal.propTypes = {
   onNewEntry: PropTypes.func,
   onUpdate: PropTypes.func,
+  promptVisibleOnPage: PropTypes.bool,
+  clearForm: PropTypes.func
 };
 
 
