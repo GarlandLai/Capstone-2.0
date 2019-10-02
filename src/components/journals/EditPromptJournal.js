@@ -56,7 +56,7 @@ class EditPromptJournal extends Component {
             <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} required/>
           </div>
           <div className="input-field">
-            <button type="submit">Create</button>
+            <button type="submit">Save Changes</button>
           </div>
         </form>
       </div>

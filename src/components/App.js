@@ -56,16 +56,6 @@ class App extends React.Component {
     .catch(error => console.log(error))
   }
 
-  // handleEdit = () => {
-  //   let id = this.state.selectedEntry.id;
-  //   axios.put(`http://localhost:3000/entries/${id}`)
-  //   .then(response => {
-  //     console.log(response)
-  //     this.handleUpdate();
-  //   })
-  //   .catch(error => console.log(error))
-  // }
-
   render() {
     console.log(this.state.JournalEntryList)
     return (

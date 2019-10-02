@@ -27,7 +27,7 @@ class JournalDetail extends React.Component {
         <button variant='primary' onClick={this.handleToggle}>Edit Entry</button>
         <button onClick={this.props.onDelete}>Delete Entry</button>
       <hr/>
-      <EditJournalEntry show={this.state.setModalShow} onToggle={this.handleToggle} />
+      <EditJournalEntry show={this.state.setModalShow} onToggle={this.handleToggle}  onUpdate={this.props.onUpdate} selectedEntry={this.props.selectedEntry} />
     </div>
     );
   } 
