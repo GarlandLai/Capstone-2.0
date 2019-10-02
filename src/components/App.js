@@ -56,15 +56,15 @@ class App extends React.Component {
     .catch(error => console.log(error))
   }
 
-  handleEdit = () => {
-    let id = this.state.selectedEntry.id;
-    axios.put(`http://localhost:3000/entries/${id}`)
-    .then(response => {
-      console.log(response)
-      this.handleUpdate();
-    })
-    .catch(error => console.log(error))
-  }
+  // handleEdit = () => {
+  //   let id = this.state.selectedEntry.id;
+  //   axios.put(`http://localhost:3000/entries/${id}`)
+  //   .then(response => {
+  //     console.log(response)
+  //     this.handleUpdate();
+  //   })
+  //   .catch(error => console.log(error))
+  // }
 
   render() {
     console.log(this.state.JournalEntryList)
@@ -76,7 +76,7 @@ class App extends React.Component {
         <Meditate />
         <NewJournalControl onUpdate={this.handleUpdate} onNewEntry={this.handleNewEntry} />
       <div className='container'>
-        <JournalList onDelete={this.handleDelete} onEdit={this.handleEdit} onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} />
+        <JournalList onDelete={this.handleDelete} onEdit={this.handleEdit} onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} onUpdate={this.handleUpdate} />
       </div>
       </div>
     );

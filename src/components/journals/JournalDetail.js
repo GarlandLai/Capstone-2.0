@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EditPromptJournal from './EditPromptJournal';
+import { Link } from 'react-router-dom';
 
 export default function JournalDetail(props) {
   return (
@@ -10,7 +12,7 @@ export default function JournalDetail(props) {
         <h4>{props.selectedEntry.prompt2}</h4>
         <h4>{props.selectedEntry.prompt3}</h4>
         <h4>{props.selectedEntry.content}</h4>
-        <button onClick={props.onEdit}>Edit Entry</button>
+        <button component={EditPromptJournal}>Edit Entry</button>
         <button onClick={props.onDelete}>Delete Entry</button>
       <hr />
     </div>
@@ -20,5 +22,5 @@ export default function JournalDetail(props) {
 JournalDetail.propTypes = {
   selectedEntry: PropTypes.object,
   onDelete: PropTypes.func,
-  onEdit: PropTypes.func
+  onUpdate: PropTypes.func
 }

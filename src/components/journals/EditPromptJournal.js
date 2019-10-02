@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-class PromptJournal extends Component {
+class EditPromptJournal extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,18 +19,16 @@ class PromptJournal extends Component {
     })
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("submitted")
-    const entry = {prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content}
-    axios.post('http://localhost:3000/entries',(entry))
-      .then(response => {
-        this.props.onUpdate();
-        this.props.clearForm();
-        console.log(response)
-      })
-      .catch(error => console.log(error))
+  handleEdit = () => {
+    let id = this.state.selectedEntry.id;
+    axios.put(`http://localhost:3000/entries/${id}`)
+    .then(response => {
+      console.log(response)
+      this.handleUpdate();
+    })
+    .catch(error => console.log(error))
   }
+
 
   render() {
     console.log(this.state);
@@ -66,12 +64,10 @@ class PromptJournal extends Component {
   }
 }
 
-PromptJournal.propTypes = {
-  onNewEntry: PropTypes.func,
-  onUpdate: PropTypes.func,
-  promptVisibleOnPage: PropTypes.bool,
-  clearForm: PropTypes.func
+EditPromptJournal.propTypes = {
+  onSelectedEntry: PropTypes.object,
+  onUpdate: PropTypes.func
 };
 
 
-export default PromptJournal;
+export default EditPromptJournal;
