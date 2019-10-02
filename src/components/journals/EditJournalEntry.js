@@ -22,7 +22,8 @@ class EditJournaEntry extends Component {
     })
   }
 
-  handleEdit = () => {
+  handleEdit = (e) => {
+    e.preventDefault();
     let id = this.props.selectedEntry.id;
     const entry = {prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content}
     axios.put(`http://localhost:3000/entries/${id}`,(entry))
