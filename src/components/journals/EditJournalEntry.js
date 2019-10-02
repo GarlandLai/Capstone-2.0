@@ -30,6 +30,7 @@ class EditJournaEntry extends Component {
     .then(response => {
       console.log(response)
       this.props.onUpdate();
+      this.props.onToggle();
     })
     .catch(error => console.log(error))
   }
