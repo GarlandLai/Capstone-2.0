@@ -61,17 +61,19 @@ class App extends React.Component {
     console.log(this.state.JournalEntryList)
     return (
       <div className="App">
-        <Navigation />
-        <div id="header">
-        <Header />
+        <div id="nav">
+          <Navigation />
         </div>
-        <About/>
+        <div id="header">
+        <Header id="header"/>
+        </div>
+        <About id="about"/>
       <div id="meditate">
         <Meditate />
         <NewJournalControl onUpdate={this.handleUpdate} onNewEntry={this.handleNewEntry} />
       </div>
       <div id="journals">
-        <JournalList onDelete={this.handleDelete} onEdit={this.handleEdit} onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} onUpdate={this.handleUpdate} />
+        <JournalList id="journals" onDelete={this.handleDelete} onEdit={this.handleEdit} onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} onUpdate={this.handleUpdate} />
       </div>
       </div>
     );
