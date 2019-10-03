@@ -8,7 +8,6 @@ function Journal(props) {
   </div>
 
   return (
-  // consolelog on props.id works below..
   <div onClick={() => {props.onSelectEntry({ prompt1: props.prompt1, prompt2: props.prompt2, prompt3: props.prompt3, content: props.content, id: props.id, created_at: props.created_at});}}>
   {journalInfo}
   </div>
