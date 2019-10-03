@@ -8,7 +8,7 @@ function Header() {
         <h1>Ziai</h1>
         <p>Improving your life one step at a time</p>
       <video className='responsive-video' autoPlay loop>
-        <source src={water} type='video/mp4' />
+        <source src={water} type='video/mp4'/>
       </video>
       </div>
     </div>

@@ -4,24 +4,33 @@
 
 #about {
   background-color: #ffe6e6;
-  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: auto;
 }
  #meditate {
   background-color:#e6e6ff;
-  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: auto;
 }
 
 #journals {
   background-color: #cce6ff;
-  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: auto;
 }
 
 .jumbotron {
+  padding-top: 100px;
+  padding-bottom: 50px;
   margin-bottom: 0;
 }
 
 #nav {
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index:1;
 }

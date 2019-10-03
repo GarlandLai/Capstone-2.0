@@ -8,6 +8,7 @@ function Navigation() {
     <div>
     <Navbar bg="dark" variant="dark">
     <Nav className="fixed-only">
+    <Link activeClass="active" to="header" spy={true} smooth={true} offset={-70} duration= {500}>Home</Link>
       <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration= {500}>About</Link>
       <Link activeClass="active" to="meditate" spy={true} smooth={true} offset={-70} duration= {500}>Meditatie</Link>
       <Link activeClass="active" to="journals" spy={true} smooth={true} offset={-70} duration= {500}>Journals</Link>
