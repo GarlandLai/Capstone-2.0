@@ -64,10 +64,11 @@ class App extends React.Component {
         <Navigation />
         <Header />
         <About/>
-
+      <div id="meditate">
         <Meditate />
         <NewJournalControl onUpdate={this.handleUpdate} onNewEntry={this.handleNewEntry} />
-      <div className='container'>
+      </div>
+      <div id="journals">
         <JournalList onDelete={this.handleDelete} onEdit={this.handleEdit} onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} onUpdate={this.handleUpdate} />
       </div>
       </div>

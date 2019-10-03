@@ -2,21 +2,20 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+#about {
+  background-color: #ffe6e6;
+  padding: 50px;
+}
+ #meditate {
+  background-color:#e6e6ff;
+    padding: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#journals {
+  background-color: #cce6ff;
+  padding: 50px;
 }
 
-.App-link {
-  color: #09d3ac;
+.jumbotron {
+  margin-bottom: 0;
 }

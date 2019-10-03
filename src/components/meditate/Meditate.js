@@ -6,7 +6,7 @@ class Meditate extends React.Component {
   render() {
     return (
       <div className='container'>
-        <h1>Meditate</h1>
+        <h1>Listen to a Meditation of your choosing and click on button to add journal!</h1>
         <div className="row">
           <div className="col-md-6">
             <div className="card">
@@ -19,6 +19,8 @@ class Meditate extends React.Component {
             </div>
           </div>
         </div>
+
+
       </div>
     );
   }
