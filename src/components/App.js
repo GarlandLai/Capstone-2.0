@@ -62,7 +62,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navigation />
+        <div id="header">
         <Header />
+        </div>
         <About/>
       <div id="meditate">
         <Meditate />
