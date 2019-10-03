@@ -3,6 +3,7 @@ import  { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import './modal.css'
 
 class EditJournaEntry extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class EditJournaEntry extends Component {
     console.log(this.props)
     return(
       <Modal
+      {...props}
       show={this.props.show} 
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
@@ -52,26 +54,19 @@ class EditJournaEntry extends Component {
       </Modal.Header>
       <Modal.Body>
         <div className="containter">
-        <form onSubmit={this.handleSubmit} id="addForm">
-          <div className="input-field">
+        <form  id="addForm">
             <label htmlFor="prompt1">How do you feel about your meditation experience?</label>
-            <input type="text" id="prompt1" onChange={this.handleChange} required/>
-          </div>
-
-          <div className="input-field">
+            <input type="text" id="prompt1" onChange={this.handleChange} placeholder={this.state.prompt1}/>
             <label htmlFor="prompt2">What did you notice about your thoughts?</label>
-            <input type="text" id="prompt2" onChange={this.handleChange} />
-          </div>
 
-          <div className="input-field">
+            <input type="text" id="prompt2" onChange={this.handleChange} placeholder={this.state.prompt2}/>
+      
             <label htmlFor="prompt3">Did you notice any sensations or discomfort? Where?</label>
-            <input type="text" id="prompt3" onChange={this.handleChange} />
-          </div>
+            <input type="text" id="prompt3" onChange={this.handleChange} placeholder={this.state.prompt3} />
 
-          <div className="input-field">
             <label htmlFor="content">This is where you can write anything you want!</label>
-            <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} required/>
-          </div>
+            <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} placeholder={this.state.content}/>
+
         </form>
         </div>
       </Modal.Body>
