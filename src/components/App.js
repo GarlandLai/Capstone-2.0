@@ -7,6 +7,7 @@ import Meditate from './meditate/Meditate';
 import NewJournalControl from './journals/NewJournalControl';
 import JournalList from './journals/JournalList';
 import axios from 'axios';
+import About from './About'
 
 class App extends React.Component {
   constructor(props) {
@@ -62,6 +63,7 @@ class App extends React.Component {
       <div className="App">
         <Navigation />
         <Header />
+        <About/>
 
         <Meditate />
         <NewJournalControl onUpdate={this.handleUpdate} onNewEntry={this.handleNewEntry} />

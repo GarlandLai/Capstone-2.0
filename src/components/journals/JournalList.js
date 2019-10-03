@@ -11,7 +11,7 @@ function JournalList(props) {
   console.log(props.selectedEntry);
   return (
 
-    <div className='container'>
+    <div className='container' id='journals'>
       {optionalContent}
       {props.journalList.map((journal) =>
         <Journal prompt1={journal.prompt1}
