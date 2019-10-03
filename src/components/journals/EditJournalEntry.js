@@ -8,10 +8,10 @@ class EditJournaEntry extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      prompt1: "",
-      prompt2: "",
-      prompt3: "",
-      content: ""
+      prompt1: this.props.selectedEntry.prompt1,
+      prompt2: this.props.selectedEntry.prompt2,
+      prompt3: this.props.selectedEntry.prompt3,
+      content: this.props.selectedEntry.content
     }
   }
 
