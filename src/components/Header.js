@@ -7,7 +7,7 @@ function Header() {
       <div className="jumbotron">
         <h1>Ziai</h1>
         <p>Improving your life one step at a time</p>
-      <video className='responsive-video' autoPlay loop>
+      <video className='responsive-video' autoPlay muted loop>
         <source src={water} type='video/mp4'/>
       </video>
       </div>
