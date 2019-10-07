@@ -23,7 +23,7 @@ class App extends React.Component {
   componentDidMount() {
     axios.get('http://localhost:3000/entries')
     .then(response => {
-      console.log(response)
+      
       this.setState(
         {JournalEntryList: response.data},
         () => console.log("state update", this.state.JournalEntryList) )
@@ -34,7 +34,7 @@ class App extends React.Component {
   handleUpdate() {
     axios.get('http://localhost:3000/entries')
     .then(response => {
-      console.log(response)
+      
       this.setState(
         {JournalEntryList: response.data},
         () => console.log("State Update", this.state.JournalEntryList) )
@@ -50,7 +50,7 @@ class App extends React.Component {
     let id = this.state.selectedEntry.id;
     axios.delete(`http://localhost:3000/entries/${id}`)
     .then(response => {
-      console.log(response)
+      
       this.handleUpdate();
       this.setState({selectedEntry: null})
     })
@@ -58,7 +58,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.JournalEntryList)
+  
     return (
       <div className="App">
         <div id="nav">

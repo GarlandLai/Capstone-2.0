@@ -14,8 +14,10 @@ class JournalDetail extends React.Component {
     this.setState({ setModalShow: !this.state.setModalShow })
    }
 
+
   render() {
-    console.log(this.state)
+
+    console.log('journal render', this.props)
   return (
     <div>
       <hr/>
