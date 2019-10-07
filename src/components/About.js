@@ -5,10 +5,10 @@ import JournalBanner from './journals/JournalBanner';
 function About() {
   return (
     <div id='about'>
-      <div class="col s8 m4 l9"> 
+      <div> 
         <MeditateInfo />
       </div>
-      <div class="col s4 m8 l3">
+      <div>
         <JournalBanner />
       </div>
     </div>

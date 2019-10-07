@@ -1,6 +1,18 @@
 .App {
   text-align: center;
 }
+.jumbotron {
+  padding-top: 100px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 0px;
+}
+
+#header {
+  padding-bottom: 0px;
+  line-height: 0;
+}
 
  #meditate {
   background-color:#e6e6ff;
@@ -22,7 +34,8 @@
   height: 400px;
   background-image: url(./images/reflect.jpg);
   background-size: cover;
-  opacity: .5;
+  padding-top: 100px;
+  color: white;
 }
 
 #journals {
@@ -34,11 +47,11 @@
   background-size: cover;
 }
 
-.jumbotron {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  margin-bottom: 0;
+#about {
+  padding-right: 0px;
+  padding-left: 0px;
 }
+
 
 .responsive-video {
   z-index: 1000;

@@ -4,11 +4,11 @@ function MeditateInfo() {
   return (
     <div id='meditateInfo'>
       <h1>Ready for shift in your life?</h1>
-      <h4>Medication can:</h4>
+      <h4>Meditation can:</h4>
       <ul>
         <li>Reduce stress and anxiety levels</li>
         <li>Promotes Emotional and physical health</li>
-        <li>Enchace self-awareness and growth</li>
+        <li>Enhance self-awareness and growth</li>
       </ul>
       <button>Get started!</button>
     </div>
