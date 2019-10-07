@@ -6,7 +6,7 @@ import JournalDetail from './JournalDetail'
 function JournalList(props) {
   let optionalContent = null;
   if (props.selectedEntry !=null) {
-    optionalContent = <JournalDetail onEdit={props.onEdit} onUpdate={props.onUpdate} selectedEntry={props.selectedEntry} onDelete={props.onDelete}/>
+    optionalContent = <JournalDetail onSelectEntry={props.onSelectEntry} onEdit={props.onEdit} onUpdate={props.onUpdate} selectedEntry={props.selectedEntry} onDelete={props.onDelete}/>
   }
   console.log(props.selectedEntry);
   return (

@@ -27,7 +27,7 @@ class JournalDetail extends React.Component {
         <button variant='primary' onClick={this.handleToggle}>Edit Entry</button>
         <button onClick={this.props.onDelete}>Delete Entry</button>
       <hr/>
-      <EditJournalEntry show={this.state.setModalShow} onToggle={this.handleToggle}  onUpdate={this.props.onUpdate} selectedEntry={this.props.selectedEntry} />
+      <EditJournalEntry show={this.state.setModalShow} onToggle={this.handleToggle}  onUpdate={this.props.onUpdate} onSelectEntry={this.props.onSelectEntry} selectedEntry={this.props.selectedEntry} />
     </div>
     );
   } 
@@ -36,7 +36,8 @@ class JournalDetail extends React.Component {
 JournalDetail.propTypes = {
   selectedEntry: PropTypes.object,
   onDelete: PropTypes.func,
-  onUpdate: PropTypes.func
+  onUpdate: PropTypes.func,
+  onSelectEntry: PropTypes.func
 }
 
 export default JournalDetail;

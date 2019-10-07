@@ -32,6 +32,8 @@ class EditJournaEntry extends Component {
       console.log(response)
       this.props.onUpdate();
       this.props.onToggle();
+      // this.props.onSelectEntry();
+      // this.props.SelectedEntry();
     })
     .catch(error => console.log(error))
   }
@@ -82,7 +84,8 @@ class EditJournaEntry extends Component {
 EditJournaEntry.propTypes = {
   onToggle: PropTypes.func,
   selectedEntry: PropTypes.object,
-  onUpdate: PropTypes.func
+  onUpdate: PropTypes.func,
+  onSelectEntry: PropTypes.func
 }
 
 export default EditJournaEntry;
