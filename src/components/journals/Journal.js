@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 function Journal(props) {
   const journalInfo = 
   <div>
-    <h2>Journal #{props.id}</h2>
+    <ul>
+    <li>Journal #{props.id}</li>
+    </ul>
   </div>
 
   return (

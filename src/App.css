@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-#about {
-  background-color: #ffe6e6;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  height: auto;
-}
  #meditate {
   background-color:#e6e6ff;
   padding-top: 50px;
@@ -15,11 +9,29 @@
   height: auto;
 }
 
+#meditateInfo {
+  height: 800px;
+  background-image: url(./images/Meditation3.jpg);
+  background-size: cover;
+  text-align: left;
+  padding-top: 300px;
+  padding-left: 200px;
+}
+
+#journalBanner {
+  height: 400px;
+  background-image: url(./images/reflect.jpg);
+  background-size: cover;
+  opacity: .5;
+}
+
 #journals {
   background-color: #cce6ff;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 175px;
+  padding-bottom: 175px;
   height: auto;
+  background-image: url(./images/journal3.jpg);
+  background-size: cover;
 }
 
 .jumbotron {
@@ -28,9 +40,21 @@
   margin-bottom: 0;
 }
 
+.responsive-video {
+  z-index: 1000;
+}
+
+.jumbotron h1 p {
+  z-index: 1;
+}
+
 #nav {
   position: fixed;
   top: 0;
   width: 100%; 
   z-index:1;
+}
+
+.page-footer {
+  padding-top: 100px;
 }
