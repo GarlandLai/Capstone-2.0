@@ -33,8 +33,6 @@ class EditJournaEntry extends Component {
       this.props.onUpdate();
       this.props.onToggle();
       this.props.onSelectEntry(entry);
-      // this.props.onSelectEntry();
-      // this.props.SelectedEntry();
     })
     .catch(error => console.log(error))
   }

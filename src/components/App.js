@@ -7,7 +7,8 @@ import Meditate from './meditate/Meditate';
 import NewJournalControl from './journals/NewJournalControl';
 import JournalList from './journals/JournalList';
 import axios from 'axios';
-import About from './About'
+import About from './About';
+import Footer from './Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -75,6 +76,7 @@ class App extends React.Component {
       <div id="journals">
         <JournalList id="journals" onDelete={this.handleDelete} onEdit={this.handleEdit} onSelectEntry={this.handleSelectEntry} journalList={this.state.JournalEntryList} selectedEntry={this.state.selectedEntry} onUpdate={this.handleUpdate} />
       </div>
+      <Footer />
       </div>
     );
   }
