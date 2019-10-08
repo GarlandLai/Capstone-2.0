@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 .jumbotron {
   padding-top: 100px;
   padding-bottom: 0px;
@@ -24,6 +25,7 @@
 #meditateInfo {
   height: 800px;
   background-image: url(./images/Meditation3.jpg);
+  background-repeat:no-repeat;
   background-size: cover;
   text-align: left;
   padding-top: 300px;
@@ -41,7 +43,7 @@
 #journals {
   background-color: #cce6ff;
   padding-top: 175px;
-  padding-bottom: 175px;
+  padding-bottom: 250px;
   height: auto;
   background-image: url(./images/journal3.jpg);
   background-size: cover;

@@ -18,8 +18,8 @@ class JournalList extends React.Component {
     }
     return (   
         <div className='container' >
-      <h1>Click on the Journal you'd like see!</h1>
         {optionalContent}
+      <h1>Click on the Journal you'd like see!</h1>
         <br/>
         {props.journalList.map((journal) =>
           <Journal prompt1={journal.prompt1}
