@@ -7,12 +7,13 @@ function MeditateInfo() {
     fontWeight: "bold",
     fontSize: "18px"
   }
-  return (
+
+    return (
     <div style={MeditationStyles} id='meditateInfo'>
       <h1>Ready for shift in your life?</h1>
       <h2>Meditation can:</h2>
       <ul>
-        <li>Reduce stress and anxiety levels</li>
+        <rollin><li>Reduce stress and anxiety levels</li></rollin>
         <li>Promotes Emotional and physical health</li>
         <li>Enhance self-awareness and growth</li>
       </ul>
