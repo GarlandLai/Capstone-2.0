@@ -1,93 +1,45 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Project Description
-Name of Student: Garland Lai <br>
-Name of Project: ZIAI <br>
-Project’s Purpose or Goal: App to help people practice self-care and improve mental health. <br>
-List the absolute minimum features the project requires to meet this purpose or goal: <br>
-Homepage with links to different sections <br>
-It will offer tools to improve mental health <br>
-It will offer tips/exercises to improve physical health <br>
-What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.<br>
-ReactJS <br>
-Javascript <br>
-Firebase Database? <br>
-Possible API? <br>
-If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? <br> Describe these features here: Be specific. <br>
-Break down mental and physical into sub-categories <br>
-Add a nutritional health section <br>
-What additional tools, frameworks, libraries, APIs, or other resources will these additional features require? <br>
-Possibly another API? <br>
-Is there anything else you’d like your instructor to know? <br>
-I’m still brainstorming ideas and possible functionalities. Will likely change things up a bit. <br>
+# README
+# ZIAI Meditation Journal
 
-## Component Tree
+### _Epicodus ReactJS Capstone Project (Front-end user interface), October 9th, 2019_
+
+### By _*Garland Lai*_
+
+## Description
+_Mediation Journaling App. Listen to a meditation and follow the prompts to submit a journal entry! This application is created by ReactJS to store data with Ruby on rails backend._
 
 ![Component Tree](/src/ComponentTree.jpg)
 
-## Available Scripts
+## Setup/Installation Requirements
 
-In the project directory, you can run:
+1. Please make sure you've started the backend server. If not, you a can[Click here](https://github.com/GarlandLai/capstone-backend.git) to get started!
+2. _[Click here](https://github.com/GarlandLai/Capstone-2.0.git) to download React user interface_
+3. _Clone the repository and go into the root directory_
+4. _Type "npm install"_
+5. _Run "npm run start"_
+6. _Terminal will ask if you would like to run the app on another port since the backend will be running on localhost:3000, Type "Y" to continue_
+7. _React application will start up on localhost:3001. Look around and enjoy!_
 
-### `npm start`
+## Known Bugs
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* _No known bugs_
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Support and contact details
 
-### `npm test`
+_If you have any questions, concerns, or suggestions, please contact me at Garlandlai24@gmail.com_
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+* _Github_
+* _React_
+* _Javascript_
+* _HTML and CSS_
+* _Materialize and Bootstrap_
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### License
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+*This webpage is licensed under the MIT license.*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2019 **_Garland Lai_**
