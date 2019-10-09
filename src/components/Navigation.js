@@ -1,21 +1,83 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Nav, Navbar} from 'react-bootstrap';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+import { Navbar } from 'react-bootstrap';
 
 function Navigation() {
+
+  const navStyles = {
+    fontWeight: "bold",
+    textShadow: "2px 7px 3px black",
+  }
+
   return ( 
     <div>
-    <Navbar bg="dark" variant="dark">
-    <Nav className="fixed-only">
-    <Link activeClass="active" to="header" spy={true} smooth={true} offset={-70} duration= {500}>Home</Link>
-      <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration= {500}>About</Link>
-      <Link activeClass="active" to="meditate" spy={true} smooth={true} offset={-70} duration= {500}>Meditatie</Link>
-      <Link activeClass="active" to="journals" spy={true} smooth={true} offset={-70} duration= {500}>Journals</Link>
-    </Nav>
-    </Navbar>
+      <Navbar bg="dark" variant="dark">
+        <div className="nav-content">
+          <ul className="nav-items">
+            <li style={navStyles} className="nav-item">
+              <Link
+                activeClass="active"
+                to="header"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+                ZIAI HOME
+              </Link>
+            </li>
+            <li style={navStyles} className="nav-item">
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li style={navStyles} className="nav-item">
+              <Link
+                activeClass="active"
+                to="meditate"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+                MEDITATE
+              </Link>
+            </li>
+            <li style={navStyles} className="nav-item">
+              <Link
+                activeClass="active"
+                to="journals"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+              >
+            JOURNALS
+              </Link>
+            </li>
+
+          </ul>
+        </div>
+      </Navbar>
     </div>
   );
 }
 
 export default Navigation;
+
+    // <Navbar bg="dark" variant="dark">
+    // <Nav className="navbar navbar-expand-lg text-uppercase fixed-top">
+    // <Navbar.Brand><Link style={navStyles} activeClass="active" to="header" spy={true} smooth={true} offset={-70} duration= {1000}>ZIAI</Link></Navbar.Brand>
+      
+    //   <Link style={navStyles} activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration= {1000}>About</Link>
+    //   <Link style={navStyles} activeClass="active" to="meditate" spy={true} smooth={true} offset={-70} duration= {1000}>Meditatie</Link>
+    //   <Link style={navStyles} activeClass="active" to="journals" spy={true} smooth={true} offset={-70} duration= {1000}>Journals</Link>
+    // </Nav>
+    // </Navbar>

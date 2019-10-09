@@ -14,7 +14,7 @@ _Mediation Journaling App. Listen to a meditation and follow the prompts to subm
 
 ## Setup/Installation Requirements
 
-1. Please make sure you've started the backend server. If not, you a can[Click here](https://github.com/GarlandLai/capstone-backend.git) to get started!
+1. Please make sure you've started the backend server. If not, you a can [Click here](https://github.com/GarlandLai/capstone-backend.git) to get started!
 2. _[Click here](https://github.com/GarlandLai/Capstone-2.0.git) to download React user interface_
 3. _Clone the repository and go into the root directory_
 4. _Type "npm install"_

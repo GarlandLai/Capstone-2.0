@@ -1,8 +1,13 @@
 import React from 'react';
 
 function JournalBanner() {
+
+  const bannerStyles = {
+    fontWeight: "bold",
+    textShadow: "4px 4px 8px black",
+  }
   return (
-    <div id='journalBanner'>
+    <div style={bannerStyles} id='journalBanner'>
       <h1>Reflect to jumpstart your goals</h1>
       <ul>
         <li>Mindfulness to improve self awareness and emotional intelligence</li>
