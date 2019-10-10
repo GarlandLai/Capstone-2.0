@@ -16,7 +16,7 @@
 }
 
  #meditate {
-  background-color:#e6e6ff;
+  background-color:#C8BAD3;
   padding-top: 50px;
   padding-bottom: 50px;
   height: auto;
@@ -72,6 +72,18 @@
 
 .page-footer {
   padding-top: 100px;
+}
+
+button {
+  background-color: #228B22;
+  padding: 6px;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  border-radius: 40%
 }
 
 @media ( mid-width: 600px) {

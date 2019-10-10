@@ -1,10 +1,13 @@
 import React from 'react';
 
 function Footer() {
+const footColor = {
+  backgroundColor: "#484848"
+}
+
   return (
     <div>
-
-    <footer class="page-footer">
+    <footer style={footColor} class="page-footer">
       <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -16,9 +19,9 @@ function Footer() {
                 <h5 class="black-text">Links</h5>
                 <ul>
                   <li><a class="black-text text-lighten-3" href="\">Home</a></li>
-                  <li><a class="black-text text-lighten-3" href="#!">About Us</a></li>
-                  <li><a class="black-text text-lighten-3" href="#!">Resources</a></li>
-                  <li><a class="black-text text-lighten-3" href="#!">Journals</a></li>
+                  <li><a class="black-text text-lighten-3" href="\">About Us</a></li>
+                  <li><a class="black-text text-lighten-3" href="\">Resources</a></li>
+                  <li><a class="black-text text-lighten-3" href="\">Journals</a></li>
                 </ul>
               </div>
             </div>
@@ -26,7 +29,7 @@ function Footer() {
           <div class="footer-copyright">
             <div class="container">
             © 2019 Copyright by Garland Lai
-            <a class="black-text text-lighten-4 right" href="#!">More Links</a>
+            <a class="black-text text-lighten-4 right" href="\">More Links</a>
             </div>
           </div>
         </footer>
