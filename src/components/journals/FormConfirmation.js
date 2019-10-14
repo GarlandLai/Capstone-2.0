@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function FormConfirmation(props){
   return (
     <div>
-      <button onClick={props.onFormConfirmation}>Add Journal Entry</button>
+      <button onClick={props.onFormConfirmation}>Add Journal</button>
     </div>
   );
 }

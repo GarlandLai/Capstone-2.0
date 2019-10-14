@@ -2,8 +2,13 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 function Journal(props) {
+  const journalStyle = {
+    fontSize: '30px',
+    fontWeight: "bold"
+  }
+
   const journalInfo = 
-  <div>
+  <div style={journalStyle}>
     <ul>
     <li>Journal #{props.id}</li>
     </ul>

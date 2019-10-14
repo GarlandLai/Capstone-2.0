@@ -6,7 +6,6 @@ import JournalDetail from './JournalDetail'
 class JournalList extends React.Component {
   constructor(props){
     super(props)
-
   }
   
   render () {

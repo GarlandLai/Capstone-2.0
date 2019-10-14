@@ -10,10 +10,10 @@ function MeditateInfo() {
 
     return (
     <div style={MeditationStyles} id='meditateInfo'>
-      <h1>Ready for shift in your life?</h1>
+      <h1>Ready for a shift in your life?</h1>
       <h2>Meditation can:</h2>
       <ul>
-        <rollin><li>Reduce stress and anxiety levels</li></rollin>
+       <li>Reduce stress and anxiety levels</li>
         <li>Promotes Emotional and physical health</li>
         <li>Enhance self-awareness and growth</li>
       </ul>
