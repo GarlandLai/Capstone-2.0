@@ -83,7 +83,11 @@ button {
   display: inline-block;
   font-size: 15px;
   margin: 4px 2px;
-  border-radius: 40%
+  border-radius: 10%;
+}
+
+button:hover {
+  background-color: grey;
 }
 
 @media ( mid-width: 600px) {

@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import './modal.css'
+import styled from "styled-components";
+
+const StyledPrompt = styled.label`
+  color: black;
+`
 
 class EditJournaEntry extends Component {
   constructor(props) {
@@ -56,16 +61,16 @@ class EditJournaEntry extends Component {
       <Modal.Body>
         <div className="containter">
         <form  id="addForm">
-            <label htmlFor="prompt1">How do you feel about your meditation experience?</label>
+            <StyledPrompt htmlFor="prompt1">How do you feel about your meditation experience?</StyledPrompt>
             <input type="text" id="prompt1" onChange={this.handleChange} placeholder={this.state.prompt1}/>
-            <label htmlFor="prompt2">What did you notice about your thoughts?</label>
+            <StyledPrompt htmlFor="prompt2">What did you notice about your thoughts?</StyledPrompt>
 
             <input type="text" id="prompt2" onChange={this.handleChange} placeholder={this.state.prompt2}/>
       
-            <label htmlFor="prompt3">Did you notice any sensations or discomfort? Where?</label>
+            <StyledPrompt htmlFor="prompt3">Did you notice any sensations or discomfort? Where?</StyledPrompt>
             <input type="text" id="prompt3" onChange={this.handleChange} placeholder={this.state.prompt3} />
 
-            <label htmlFor="content">This is where you can write anything you want!</label>
+            <StyledPrompt htmlFor="content">This is where you can write anything you want!</StyledPrompt>
             <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} placeholder={this.state.content}/>
 
         </form>

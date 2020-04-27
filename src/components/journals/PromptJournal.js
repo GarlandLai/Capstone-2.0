@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import styled from "styled-components";
+
+const StyledPrompt = styled.label`
+color: black !important;
+`
 
 class PromptJournal extends Component {
   constructor(props) {
@@ -39,22 +44,22 @@ class PromptJournal extends Component {
         <form onSubmit={this.handleSubmit} id="addForm">
           <h4 className="grey-text text-darken-3">Meditation Journal</h4>
           <div className="input-field">
-            <label htmlFor="prompt1">How do you feel about your meditation experience?</label>
+            <StyledPrompt htmlFor="prompt1">How do you feel about your meditation experience?</StyledPrompt>
             <input type="text" id="prompt1" onChange={this.handleChange} required/>
           </div>
 
           <div className="input-field">
-            <label htmlFor="prompt2">What did you notice about your thoughts?</label>
+            <StyledPrompt htmlFor="prompt2">What did you notice about your thoughts?</StyledPrompt>
             <input type="text" id="prompt2" onChange={this.handleChange} />
           </div>
 
           <div className="input-field">
-            <label htmlFor="prompt3">Did you notice any sensations or discomfort? Where?</label>
+            <StyledPrompt htmlFor="prompt3">Did you notice any sensations or discomfort? Where?</StyledPrompt>
             <input type="text" id="prompt3" onChange={this.handleChange} />
           </div>
 
           <div className="input-field">
-            <label htmlFor="content">This is where you can write anything you want!</label>
+            <StyledPrompt htmlFor="content">This is where you can write anything you want!</StyledPrompt>
             <textarea className="materialize-textarea"  id="content" onChange={this.handleChange} required/>
           </div>
           <div className="input-field">

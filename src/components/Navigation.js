@@ -71,13 +71,3 @@ function Navigation() {
 }
 
 export default Navigation;
-
-    // <Navbar bg="dark" variant="dark">
-    // <Nav className="navbar navbar-expand-lg text-uppercase fixed-top">
-    // <Navbar.Brand><Link style={navStyles} activeClass="active" to="header" spy={true} smooth={true} offset={-70} duration= {1000}>ZIAI</Link></Navbar.Brand>
-      
-    //   <Link style={navStyles} activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration= {1000}>About</Link>
-    //   <Link style={navStyles} activeClass="active" to="meditate" spy={true} smooth={true} offset={-70} duration= {1000}>Meditatie</Link>
-    //   <Link style={navStyles} activeClass="active" to="journals" spy={true} smooth={true} offset={-70} duration= {1000}>Journals</Link>
-    // </Nav>
-    // </Navbar>
