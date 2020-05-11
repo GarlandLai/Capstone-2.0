@@ -1,20 +1,35 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { Navbar } from 'react-bootstrap';
+import styled from "styled-components";
 
 function Navigation() {
+  // const navStyles = {
+  //   fontWeight: "bold",
+  //   textShadow: "2px 7px 3px black",
+  // }
 
-  const navStyles = {
-    fontWeight: "bold",
-    textShadow: "2px 7px 3px black",
-  }
+  const CustomNav = styled.div`
+    background-color: grey;
+    width: 100vw;
+    height: 75px;
+  `;
+  const StyledList = styled.ul`
+    display: inline-flex;
+  `;
+  const StyledItem = styled.li`
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 100px;
+  `;
 
   return ( 
     <div>
-      <Navbar bg="dark" variant="dark">
-        <div className="nav-content">
-          <ul className="nav-items">
-            <li style={navStyles} className="nav-item">
+      {/* <Navbar bg="dark" variant="dark"> */}
+        {/* <div className="nav-content"> */}
+      <CustomNav>
+          <StyledList>
+            <StyledItem>
               <Link
                 activeClass="active"
                 to="header"
@@ -25,8 +40,8 @@ function Navigation() {
               >
                 ZIAI HOME
               </Link>
-            </li>
-            <li style={navStyles} className="nav-item">
+            </StyledItem>
+            <StyledItem>
               <Link
                 activeClass="active"
                 to="about"
@@ -37,8 +52,8 @@ function Navigation() {
               >
                 ABOUT
               </Link>
-            </li>
-            <li style={navStyles} className="nav-item">
+            </StyledItem>
+            <StyledItem>
               <Link
                 activeClass="active"
                 to="meditate"
@@ -49,8 +64,8 @@ function Navigation() {
               >
                 MEDITATE
               </Link>
-            </li>
-            <li style={navStyles} className="nav-item">
+            </StyledItem>
+            <StyledItem>
               <Link
                 activeClass="active"
                 to="journals"
@@ -61,11 +76,12 @@ function Navigation() {
               >
             JOURNALS
               </Link>
-            </li>
+            </StyledItem>
 
-          </ul>
-        </div>
-      </Navbar>
+          </StyledList>
+          </CustomNav>
+        {/* </div> */}
+      {/* </Navbar> */}
     </div>
   );
 }
