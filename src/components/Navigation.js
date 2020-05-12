@@ -3,11 +3,21 @@ import { Link } from 'react-scroll';
 import styled from "styled-components";
 
 const CustomNav = styled.div`
-background-color: grey;
-width: 100vw;
-height: 75px;
+  background-color: grey;
+  width: 100vw;
+  height: 75px;
 `;
 
+const StyledLink = styled(Link)`
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0 100px;
+  height: 75px;
+
+  :hover {
+    background-color: lightgrey;
+  }
+`;
 const StyledList = styled.div`
 display: inline-flex;
 
@@ -17,17 +27,6 @@ p {
 `;
 
 function Navigation() {
-  const StyledLink = styled(Link)`
-    font-size: 24px;
-    font-weight: 600;
-    padding: 0 100px;
-    height: 75px;
-
-    :hover {
-      background-color: lightgrey;
-    }
-  `;
-
   return ( 
     <div>
       <CustomNav>
@@ -55,7 +54,7 @@ function Navigation() {
             <StyledLink
               activeClass="active"
               to="meditate"
-               spy={true}
+              spy={true}
               smooth={true}
               offset={-70}
               duration={1000}
