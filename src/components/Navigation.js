@@ -2,30 +2,21 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import styled from "styled-components";
 
+const CustomNav = styled.div`
+background-color: grey;
+width: 100vw;
+height: 75px;
+`;
+
+const StyledList = styled.div`
+display: inline-flex;
+
+p {
+  padding-top: 20px;
+}
+`;
+
 function Navigation() {
-  // const navStyles = {
-  //   fontWeight: "bold",
-  //   textShadow: "2px 7px 3px black",
-  // }
-
-  const CustomNav = styled.div`
-    background-color: grey;
-    width: 100vw;
-    height: 75px;
-
-  `;
-  const StyledList = styled.div`
-    display: inline-flex;
-    padding-top: 20px;
-  `;
-  // const StyledItem = styled.li`
-  //   // height: 75px;
-
-  //   :hover {
-  //     background-color: lightgrey;
-  //   }
-  // `;
-
   const StyledLink = styled(Link)`
     font-size: 24px;
     font-weight: 600;
@@ -39,63 +30,50 @@ function Navigation() {
 
   return ( 
     <div>
-      {/* <Navbar bg="dark" variant="dark"> */}
-        {/* <div className="nav-content"> */}
       <CustomNav>
           <StyledList>
-            {/* <StyledItem> */}
-              <StyledLink
-                activeClass="active"
-                to="header"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={1000}
+            <StyledLink
+              activeClass="active"
+              to="header"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
               >
-                ZIAI HOME
-              </StyledLink>
-            {/* </StyledItem> */}
-            {/* <StyledItem> */}
-              <StyledLink
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={1000}
+              <p>ZIAI HOME</p>
+            </StyledLink>
+            <StyledLink
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
               >
-                ABOUT
-              </StyledLink>
-            {/* </StyledItem> */}
-            {/* <StyledItem> */}
-              <StyledLink
-                activeClass="active"
-                to="meditate"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={1000}
+              <p>ABOUT</p>
+            </StyledLink>
+            <StyledLink
+              activeClass="active"
+              to="meditate"
+               spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
               >
-                MEDITATE
-              </StyledLink>
-            {/* </StyledItem> */}
-            {/* <StyledItem> */}
-              <StyledLink
-                activeClass="active"
-                to="journals"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={1000}
-              >
-            JOURNALS
-              </StyledLink>
-            {/* </StyledItem> */}
-
-          </StyledList>
-          </CustomNav>
-        {/* </div> */}
-      {/* </Navbar> */}
+              <p>MEDITATE</p>
+            </StyledLink>
+            <StyledLink
+              activeClass="active"
+              to="journals"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
+            >
+            <p>JOURNALS</p>
+          </StyledLink>
+        </StyledList>
+      </CustomNav>
     </div>
   );
 }
