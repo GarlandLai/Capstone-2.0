@@ -13,6 +13,7 @@ function Navigation() {
     background-color: grey;
     width: 100vw;
     height: 75px;
+
   `;
   const StyledList = styled.ul`
     display: inline-flex;
@@ -21,6 +22,11 @@ function Navigation() {
     font-size: 24px;
     font-weight: 600;
     padding: 0 100px;
+    height: 75px;
+
+    :hover {
+      background-color: lightgrey;
+    }
   `;
 
   return ( 
