@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Navbar } from 'react-bootstrap';
 import styled from "styled-components";
 
 function Navigation() {
@@ -15,10 +14,19 @@ function Navigation() {
     height: 75px;
 
   `;
-  const StyledList = styled.ul`
+  const StyledList = styled.div`
     display: inline-flex;
+    padding-top: 20px;
   `;
-  const StyledItem = styled.li`
+  // const StyledItem = styled.li`
+  //   // height: 75px;
+
+  //   :hover {
+  //     background-color: lightgrey;
+  //   }
+  // `;
+
+  const StyledLink = styled(Link)`
     font-size: 24px;
     font-weight: 600;
     padding: 0 100px;
@@ -35,8 +43,8 @@ function Navigation() {
         {/* <div className="nav-content"> */}
       <CustomNav>
           <StyledList>
-            <StyledItem>
-              <Link
+            {/* <StyledItem> */}
+              <StyledLink
                 activeClass="active"
                 to="header"
                 spy={true}
@@ -45,10 +53,10 @@ function Navigation() {
                 duration={1000}
               >
                 ZIAI HOME
-              </Link>
-            </StyledItem>
-            <StyledItem>
-              <Link
+              </StyledLink>
+            {/* </StyledItem> */}
+            {/* <StyledItem> */}
+              <StyledLink
                 activeClass="active"
                 to="about"
                 spy={true}
@@ -57,10 +65,10 @@ function Navigation() {
                 duration={1000}
               >
                 ABOUT
-              </Link>
-            </StyledItem>
-            <StyledItem>
-              <Link
+              </StyledLink>
+            {/* </StyledItem> */}
+            {/* <StyledItem> */}
+              <StyledLink
                 activeClass="active"
                 to="meditate"
                 spy={true}
@@ -69,10 +77,10 @@ function Navigation() {
                 duration={1000}
               >
                 MEDITATE
-              </Link>
-            </StyledItem>
-            <StyledItem>
-              <Link
+              </StyledLink>
+            {/* </StyledItem> */}
+            {/* <StyledItem> */}
+              <StyledLink
                 activeClass="active"
                 to="journals"
                 spy={true}
@@ -81,8 +89,8 @@ function Navigation() {
                 duration={1000}
               >
             JOURNALS
-              </Link>
-            </StyledItem>
+              </StyledLink>
+            {/* </StyledItem> */}
 
           </StyledList>
           </CustomNav>
