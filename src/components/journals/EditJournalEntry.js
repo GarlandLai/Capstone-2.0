@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  { Modal, Button, Row, Col, Form } from 'react-bootstrap';
+import  { Modal, Button} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const StyledPrompt = styled.label`
   color: black;
-`
+`;
 
 class EditJournaEntry extends Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class EditJournaEntry extends Component {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title id="contained-modal-title-vcenter">
           Edit Journal {this.props.selectedEntry.id}
         </Modal.Title>
@@ -77,8 +77,8 @@ class EditJournaEntry extends Component {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="danger" onClick={this.handleEdit}>Save Changes</Button>
-        <Button variant="danger" onClick={this.props.onToggle}>Close</Button>
+        <Button id="save" variant="danger" onClick={this.handleEdit}>Save Changes</Button>
+        <Button id="close" variant="danger" onClick={this.props.onToggle}>Close</Button>
       </Modal.Footer>
     </Modal>
     );

@@ -11,6 +11,7 @@ const Container = styled.div`
 
 const Button = styled.button`
   margin: 15px;
+  padding: 5px;
 `;
 
 const H1 = styled.h1`
@@ -18,7 +19,7 @@ const H1 = styled.h1`
 `;
 
 const H4 = styled.h4`
-  padding: 7px;
+  padding: 5px;
 `;
 
 class JournalDetail extends Component {
