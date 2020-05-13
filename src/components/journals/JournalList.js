@@ -21,13 +21,14 @@ class JournalList extends React.Component {
       <h1>Click on the Journal you'd like see!</h1>
         <br/>
         {props.journalList.map((journal) =>
-          <Journal prompt1={journal.prompt1}
-          prompt2={journal.prompt2}
-          prompt3={journal.prompt3}
-          content={journal.content}
-          created_at={journal.created_at}
-          onSelectEntry={props.onSelectEntry}
-          id={journal.id} />
+          <Journal 
+            prompt1={journal.prompt1}
+            prompt2={journal.prompt2}
+            prompt3={journal.prompt3}
+            content={journal.content}
+            created_at={journal.created_at}
+            onSelectEntry={props.onSelectEntry}
+            id={journal.id} />
           )}
       </div>
     );

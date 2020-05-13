@@ -7,7 +7,7 @@ const JournalCard = styled.div`
   font-size: 30px;
   font-weight: 600;
   border: 1px solid grey;
-  box-shadow: 3px 5spx grey;
+  box-shadow: 2px 4px grey;
   padding 20px;
   margin: 5px;
   width: 200px;
