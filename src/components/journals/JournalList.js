@@ -2,6 +2,13 @@ import React from 'react';
 import Journal from './Journal';
 import PropTypes from 'prop-types';
 import JournalDetail from './JournalDetail'
+import styled from "styled-components";
+
+const ListContainer = styled.div`
+  display: flex;
+  width: 700px;
+  align-content: center;
+`;
 
 class JournalList extends React.Component {
   constructor(props){
@@ -20,6 +27,7 @@ class JournalList extends React.Component {
         {optionalContent}
       <h1>Click on the Journal you'd like see!</h1>
         <br/>
+        <ListContainer>
         {props.journalList.map((journal) =>
           <Journal 
             prompt1={journal.prompt1}
@@ -30,6 +38,7 @@ class JournalList extends React.Component {
             onSelectEntry={props.onSelectEntry}
             id={journal.id} />
           )}
+          </ListContainer>
       </div>
     );
   }

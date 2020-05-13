@@ -14,6 +14,12 @@ const JournalCard = styled.div`
   height: auto;
 `;
 
+// const JournalContainer = styled.div`
+//   width: 100vw;
+//   height: auto;
+//   display: inline-fex
+// `;
+
 function Journal(props) {
   const journalInfo = 
   <JournalCard>
