@@ -1,18 +1,24 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import styled from "styled-components";
+
+const JournalCard = styled.div`
+  display: inline-flex;
+  font-size: 30px;
+  font-weight: 600;
+  border: 1px solid grey;
+  box-shadow: 3px 5spx grey;
+  padding 20px;
+  margin: 5px;
+  width: 200px;
+  height: auto;
+`;
 
 function Journal(props) {
-  const journalStyle = {
-    fontSize: '30px',
-    fontWeight: "bold"
-  }
-
   const journalInfo = 
-  <div style={journalStyle}>
-    <ul>
-    <li>Journal #{props.id}</li>
-    </ul>
-  </div>
+  <JournalCard>
+    <p>Journal #{props.id}</p>
+  </JournalCard>
 
   return (
   <div onClick={() => {props.onSelectEntry({ prompt1: props.prompt1, prompt2: props.prompt2, prompt3: props.prompt3, content: props.content, id: props.id, created_at: props.created_at});}}>
