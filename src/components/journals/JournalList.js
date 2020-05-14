@@ -6,8 +6,7 @@ import styled from "styled-components";
 
 const ListContainer = styled.div`
   display: flex;
-  width: 700px;
-  align-content: center;
+  margin: 20px;
 `;
 
 class JournalList extends React.Component {
@@ -22,9 +21,11 @@ class JournalList extends React.Component {
     if (props.selectedEntry !=null) {
       optionalContent = <JournalDetail onSelectEntry={props.onSelectEntry} onEdit={props.onEdit} onUpdate={props.onUpdate} selectedEntry={props.selectedEntry} onDelete={props.onDelete}/>
     }
-    return (   
-        <div className='container' >
+    return (
+      <div>
+        <div className='container'>
         {optionalContent}
+        </div>
       <h1>Click on the Journal you'd like see!</h1>
         <br/>
         <ListContainer>
