@@ -12,6 +12,8 @@ const JournalCard = styled.div`
   margin: 5px;
   width: 200px;
   height: auto;
+  border-radius: 5px;
+  background-color: lightgrey;
 `;
 
 // const JournalContainer = styled.div`

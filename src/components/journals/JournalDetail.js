@@ -6,6 +6,7 @@ import styled from "styled-components";
 const Container = styled.div`
   border: 1px solid grey;
   box-shadow: 2px 4px grey;
+  border-radius: 5px;
   background-color: lightgrey;
 `;
 

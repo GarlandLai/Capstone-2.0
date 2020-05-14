@@ -26,6 +26,7 @@ class JournalList extends React.Component {
       <div>
         <div className='container'>
         {optionalContent}
+        <br />
         </div>
       <h1>Click on the Journal you'd like see!</h1>
         <br/>
