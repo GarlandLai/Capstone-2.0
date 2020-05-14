@@ -5,7 +5,8 @@ import JournalDetail from './JournalDetail'
 import styled from "styled-components";
 
 const ListContainer = styled.div`
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   margin: 20px;
 `;
 
