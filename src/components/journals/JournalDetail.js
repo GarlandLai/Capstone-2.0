@@ -23,6 +23,19 @@ const H4 = styled.h4`
   padding: 5px;
 `;
 
+const CloseButton = styled.button`
+  font-size: 24px;
+  background: none;
+  float: right;
+  padding: 5px 10px;
+  margin: 0;
+
+  :hover {
+    background-color: grey;
+    border-radius: 45px;
+  }
+`;
+
 class JournalDetail extends Component {
   constructor(props) {
     super(props);
@@ -41,7 +54,9 @@ class JournalDetail extends Component {
     console.log('journal render', this.props)
   return (
     <Container>
-      <H1>Journal #{this.props.selectedEntry.id}</H1>
+      <H1>Journal #{this.props.selectedEntry.id}
+        <CloseButton onClick={()=> this.props.onSelectEntry(null)}>X</CloseButton>
+      </H1>
       <H4>{this.props.selectedEntry.prompt1}</H4>
       <H4>{this.props.selectedEntry.prompt2}</H4>
       <H4>{this.props.selectedEntry.prompt3}</H4>

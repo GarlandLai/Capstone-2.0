@@ -14,6 +14,10 @@ const JournalCard = styled.div`
   height: auto;
   border-radius: 5px;
   background-color: lightgrey;
+
+  :hover {
+    background-color: grey;
+  }
 `;
 
 // const JournalContainer = styled.div`
