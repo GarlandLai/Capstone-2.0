@@ -7,29 +7,29 @@ const footColor = {
 
   return (
     <div>
-    <footer style={footColor} class="page-footer">
-      <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h4 class="black-text">Contact Us</h4>
-                <strong><p class="black-text text-lighten-4">Epicodus</p></strong>
-                <p class="black-text text-lighten-4">400 SW 6th Ave, Suite 800, Portland, OR 97204</p>
+    <footer style={footColor} className="page-footer">
+      <div className="container">
+            <div className="row">
+              <div className="col l6 s12">
+                <h4 className="black-text">Contact Us</h4>
+                <strong><p className="black-text text-lighten-4">Epicodus</p></strong>
+                <p className="black-text text-lighten-4">400 SW 6th Ave, Suite 800, Portland, OR 97204</p>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="black-text">Links</h5>
+              <div className="col l4 offset-l2 s12">
+                <h5 className="black-text">Links</h5>
                 <ul>
-                  <li><a class="black-text text-lighten-3" href="\">Home</a></li>
-                  <li><a class="black-text text-lighten-3" href="\">About Us</a></li>
-                  <li><a class="black-text text-lighten-3" href="\">Resources</a></li>
-                  <li><a class="black-text text-lighten-3" href="\">Journals</a></li>
+                  <li><a className="black-text text-lighten-3" href="\">Home</a></li>
+                  <li><a className="black-text text-lighten-3" href="\">About Us</a></li>
+                  <li><a className="black-text text-lighten-3" href="\">Resources</a></li>
+                  <li><a className="black-text text-lighten-3" href="\">Journals</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
+          <div className="footer-copyright">
+            <div className="container">
             © 2019 Copyright by Garland Lai
-            <a class="black-text text-lighten-4 right" href="\">More Links</a>
+            <a className="black-text text-lighten-4 right" href="\">More Links</a>
             </div>
           </div>
         </footer>

@@ -26,8 +26,8 @@ class App extends React.Component {
     .then(response => {
       
       this.setState(
-        {JournalEntryList: response.data},
-        () => console.log("state update", this.state.JournalEntryList) )
+        {JournalEntryList: response.data}
+      )
     })
     .catch(error => console.log(error))
   }
@@ -37,8 +37,8 @@ class App extends React.Component {
     .then(response => {
       
       this.setState(
-        {JournalEntryList: response.data},
-        () => console.log("State Update", this.state.JournalEntryList) )
+        {JournalEntryList: response.data}
+      )
     })
     .catch(error => console.log(error))
   }

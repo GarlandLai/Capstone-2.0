@@ -22,7 +22,6 @@ class EditJournaEntry extends Component {
   }
 
   handleChange = (e) => {
-    console.log(this.state)
     this.setState({
        [e.target.id]: e.target.value
     })
@@ -34,7 +33,6 @@ class EditJournaEntry extends Component {
     const entry = {prompt1: this.state.prompt1, prompt2: this.state.prompt2, prompt3: this.state.prompt3, content: this.state.content, id: id}
     axios.put(`http://localhost:3000/entries/${id}`,(entry))
     .then(response => {
-      console.log(response)
       this.props.onUpdate();
       this.props.onToggle();
       this.props.onSelectEntry(entry);
@@ -44,7 +42,6 @@ class EditJournaEntry extends Component {
 
 
   render(props) {
-    console.log(this.props)
     return(
       <Modal
       {...props}

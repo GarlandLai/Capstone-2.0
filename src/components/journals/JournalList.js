@@ -17,7 +17,6 @@ class JournalList extends React.Component {
   
   render () {
     const props = this.props;
-    console.log('journal list render',props.selectedEntry);
     let optionalContent = null;
     if (props.selectedEntry !=null) {
       optionalContent = <JournalDetail onSelectEntry={props.onSelectEntry} onEdit={props.onEdit} onUpdate={props.onUpdate} selectedEntry={props.selectedEntry} onDelete={props.onDelete}/>
@@ -31,8 +30,9 @@ class JournalList extends React.Component {
       <h1>Click on the Journal you'd like see!</h1>
         <br/>
         <ListContainer>
-        {props.journalList.map((journal) =>
+        {props.journalList.map((journal, index) =>
           <Journal 
+            key={index}
             prompt1={journal.prompt1}
             prompt2={journal.prompt2}
             prompt3={journal.prompt3}

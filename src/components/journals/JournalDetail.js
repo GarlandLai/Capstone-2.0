@@ -50,8 +50,6 @@ class JournalDetail extends Component {
 
 
   render() {
-
-    console.log('journal render', this.props)
   return (
     <Container>
       <H1>Journal #{this.props.selectedEntry.id}
