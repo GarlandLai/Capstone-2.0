@@ -5,9 +5,11 @@ import JournalDetail from './JournalDetail'
 import styled from "styled-components";
 
 const ListContainer = styled.div`
-  display: inline-flex;
+  width: 1200px;
+  display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  justify-content: center;
+  margin: auto;
 `;
 
 class JournalList extends React.Component {

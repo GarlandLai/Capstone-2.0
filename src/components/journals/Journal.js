@@ -9,7 +9,7 @@ const JournalCard = styled.div`
   border: 1px solid grey;
   box-shadow: 2px 4px grey;
   padding 20px;
-  margin: 5px;
+  margin: 10px;
   width: 200px;
   height: auto;
   border-radius: 5px;
@@ -19,12 +19,6 @@ const JournalCard = styled.div`
     background-color: grey;
   }
 `;
-
-// const JournalContainer = styled.div`
-//   width: 100vw;
-//   height: auto;
-//   display: inline-fex
-// `;
 
 function Journal(props) {
   const journalInfo = 
