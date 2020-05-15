@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 import Header from './Header';
 import Navigation from './Navigation';
-import { Switch, Route } from 'react-router-dom';
 import Meditate from './meditate/Meditate';
 import NewJournalControl from './journals/NewJournalControl';
 import JournalList from './journals/JournalList';
@@ -59,7 +58,6 @@ class App extends React.Component {
   }
 
   render() {
-  
     return (
       <div className="App">
         <div id="nav">
