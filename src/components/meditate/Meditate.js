@@ -3,8 +3,6 @@ import Meditation from './Meditation';
 import Music from './Music';
 
 class Meditate extends React.Component {
-
-  
   render() {
     const cardStyle = {
       paddingTop: "50px",

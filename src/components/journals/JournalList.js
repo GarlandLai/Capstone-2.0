@@ -19,10 +19,6 @@ const JournalTitle = styled.p`
 `;
 
 class JournalList extends React.Component {
-  constructor(props){
-    super(props)
-  }
-  
   render () {
     const props = this.props;
     let optionalContent = null;
