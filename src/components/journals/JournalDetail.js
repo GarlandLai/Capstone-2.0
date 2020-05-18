@@ -4,15 +4,11 @@ import EditJournalEntry from './EditJournalEntry';
 import styled from "styled-components";
 
 const Container = styled.div`
+  padding: 10px;
   border: 1px solid grey;
-  box-shadow: 2px 4px grey;
+  box-shadow: 4px 4px grey;
   border-radius: 5px;
   background-color: lightgrey;
-`;
-
-const Button = styled.button`
-  margin: 15px;
-  padding: 5px;
 `;
 
 const H1 = styled.h1`
@@ -24,6 +20,7 @@ const H4 = styled.h4`
 `;
 
 const CloseButton = styled.button`
+  color: black;
   font-size: 24px;
   background: none;
   float: right;
@@ -59,8 +56,8 @@ class JournalDetail extends Component {
       <H4>{this.props.selectedEntry.prompt2}</H4>
       <H4>{this.props.selectedEntry.prompt3}</H4>
       <H4>{this.props.selectedEntry.content}</H4>
-      <Button onClick={this.handleToggle}>Edit Entry</Button>
-      <Button onClick={this.props.onDelete}>Delete Entry</Button>
+      <button onClick={this.handleToggle}>Edit Entry</button>
+      <button onClick={this.props.onDelete}>Delete Entry</button>
       <EditJournalEntry show={this.state.setModalShow} onToggle={this.handleToggle}  onUpdate={this.props.onUpdate} onSelectEntry={this.props.onSelectEntry} selectedEntry={this.props.selectedEntry} />
     </Container>
     );
