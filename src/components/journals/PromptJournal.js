@@ -64,6 +64,7 @@ class PromptJournal extends Component {
           </div>
           <div className="input-field">
             <button type="submit">Create</button>
+            <button onClick={this.props.clearForm}>Cancel</button>
           </div>
         </form>
       </div>
