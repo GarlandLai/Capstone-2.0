@@ -7,7 +7,7 @@ const JournalCard = styled.div`
   font-size: 30px;
   font-weight: 600;
   border: 1px solid grey;
-  box-shadow: 2px 4px grey;
+  box-shadow: 4px 4px grey;
   padding 20px;
   margin: 10px;
   width: 200px;
@@ -17,6 +17,7 @@ const JournalCard = styled.div`
 
   :hover {
     background-color: grey;
+    box-shadow: 4px 4px black;
   }
 `;
 

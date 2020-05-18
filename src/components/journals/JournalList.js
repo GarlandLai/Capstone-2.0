@@ -12,6 +12,12 @@ const ListContainer = styled.div`
   margin: auto;
 `;
 
+const JournalTitle = styled.p`
+  font-size: 50px;
+  text-shadow: darkgrey 7px 7px 7px;
+  font-weight: 600;
+`;
+
 class JournalList extends React.Component {
   constructor(props){
     super(props)
@@ -27,9 +33,9 @@ class JournalList extends React.Component {
       <div>
         <div className='container'>
         {optionalContent}
-        <br />
+          <br />
+        <JournalTitle>Journals</JournalTitle>
         </div>
-      <h1>Click on the Journal you'd like see!</h1>
         <br/>
         <ListContainer>
         {props.journalList.map((journal, index) =>
