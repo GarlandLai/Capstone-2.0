@@ -34,7 +34,8 @@ class PromptJournal extends Component {
 			content: this.state.content,
 		};
 		axios
-			.post('http://localhost:3000/entries', entry)
+			// .post('http://localhost:3000/entries', entry)
+			.post('https://salty-reef-45366.herokuapp.com/entries', entry)
 			.then((response) => {
 				this.props.onUpdate();
 				this.props.clearForm();
