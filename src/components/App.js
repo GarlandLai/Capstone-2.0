@@ -47,7 +47,8 @@ class App extends React.Component {
 	handleDelete = () => {
 		let id = this.state.selectedEntry.id;
 		axios
-			.delete(`http://localhost:3000/entries/${id}`)
+			// .delete(`http://localhost:3000/entries/${id}`)
+			.delete(`https://salty-reef-45366.herokuapp.com/entries/${id}`)
 			.then((response) => {
 				this.handleUpdate();
 				this.setState({ selectedEntry: null });
