@@ -7,6 +7,11 @@ const StyledPrompt = styled.label`
 	color: black !important;
 `;
 
+const StyledH4 = styled.h4`
+	font-size: 40px;
+	margin: 40px 0;
+`;
+
 class PromptJournal extends Component {
 	constructor(props) {
 		super(props);
@@ -49,7 +54,9 @@ class PromptJournal extends Component {
 		return (
 			<div className="container">
 				<form onSubmit={this.handleSubmit} id="addForm">
-					<h4 className="grey-text text-darken-3">Meditation Journal</h4>
+					<StyledH4 className="grey-text text-darken-3">
+						Meditation Journal
+					</StyledH4>
 					<div className="input-field">
 						<StyledPrompt htmlFor="prompt1">
 							How do you feel about your meditation experience?
