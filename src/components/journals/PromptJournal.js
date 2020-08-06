@@ -31,7 +31,6 @@ class PromptJournal extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		console.log('submitted');
 		const entry = {
 			prompt1: this.state.prompt1,
 			prompt2: this.state.prompt2,
@@ -44,13 +43,11 @@ class PromptJournal extends Component {
 			.then((response) => {
 				this.props.onUpdate();
 				this.props.clearForm();
-				console.log(response);
 			})
 			.catch((error) => console.log(error));
 	};
 
 	render() {
-		console.log(this.state);
 		return (
 			<div className="container">
 				<form onSubmit={this.handleSubmit} id="addForm">
